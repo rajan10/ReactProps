@@ -1,25 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+
+// child component as this component receives props from parent component
+function Hello(props){
+ return <h1>Hello {props.name}! How are you?</h1>
+}
+  
+//parent component as this component sends props to child component
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <Hello name="Ram" / >;
 }
 
 export default App;
